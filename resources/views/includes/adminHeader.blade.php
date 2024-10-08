@@ -98,7 +98,7 @@
                 <li><a class="dropdown-item" href="{{route('testimonials.index')}}">All testimonials</a></li>
               </ul>
             </li>
-            <li><a class="nav-item nav-link" href="{{route('contactMessages')}}">MESSAGES</a></li>
+            <li><a class="nav-item nav-link" href="{{route('messages.index')}}">MESSAGES</a></li>
           </ul>
         </div>
       </div>

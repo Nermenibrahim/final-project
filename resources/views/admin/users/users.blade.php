@@ -42,7 +42,7 @@
             </div>
         </div>
     </div>
-    @include('includes.adminjsfiles')
+    @include('includes.adminJsfiles')
 </body>
 
 </html>

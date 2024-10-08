@@ -30,7 +30,7 @@
                         @foreach($topics as $topic)
                         <tr>
                             <th scope="row">{{ date('d M Y') }}</th>
-                            <td><a class="text-decoration-none text-dark" href="{{route('topicDetail',$topic['id'])}}">{{$topic['topicTitle']}}</a>
+                            <td><a class="text-decoration-none text-dark" href="{{route('topics.show',$topic['id'])}}">{{$topic['topicTitle']}}</a>
                             </td>
 
                             <td>{{$topic->category->categoryName}}</td>

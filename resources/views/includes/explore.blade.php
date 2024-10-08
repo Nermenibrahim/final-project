@@ -38,7 +38,7 @@
 
                                     <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
                                         <div class="custom-block bg-white shadow-lg">
-                                            <a href="{{route('topics.show',$topic['id'])}}">
+                                            <a href="{{route('topicDetail',$topic['id'])}}">
                                                 <div class="d-flex">
                                                     <div>
                                                         <h5 class="mb-2">{{$topic['topicTitle']}}</h5>

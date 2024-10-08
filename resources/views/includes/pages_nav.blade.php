@@ -24,7 +24,7 @@
                             </li>
     
                             <li class="nav-item">
-                                <a class="nav-link" href="{{route('contacts.create')}}">Contact Us</a>
+                                <a class="nav-link" href="{{route('contact-us')}}">Contact Us</a>
                             </li>
 
                             <li class="nav-item">

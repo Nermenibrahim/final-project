@@ -18,6 +18,7 @@
                             <th scope="col">Created At</th>
                             <th scope="col">Category</th>
                             <th scope="col">Edit</th>
+                            <th scope="col">Delete</th>
                             
                         </tr>
                     </thead>
@@ -27,7 +28,8 @@
                             <th scope="row">{{ date('d M Y') }}</th>
                             <td>{{$category['categoryName']}}</td>
                             <td class="text-center"><a class="text-decoration-none text-dark" href="{{route('categories.edit',$category['id'])}}"><img src="{{asset('assets/admin/images/edit-svgrepo-com.svg')}}"></a></td>
-                            
+                            <td class="text-center"><a class="text-decoration-none text-dark" href="{{route('categories.destroy',$category['id'])}}"><img src="{{asset('assets/admin/images/trash-can-svgrepo-com.svg')}}" onclick="confirm('Are you sure you want to delete?')" ></a></td>
+
                         </tr>
                         @endforeach
                     </tbody>

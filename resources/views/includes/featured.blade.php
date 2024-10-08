@@ -6,7 +6,7 @@
                 @if($topics->count() >= 2)
                     <div class="col-lg-4 col-12 mb-4 mb-lg-0">
                         <div class="custom-block bg-white shadow-lg">
-                            <a href="{{route('topics.show',$topics[0]->id)}}">
+                            <a href="{{route('topicDetail',$topics[0]->id)}}">
                                 <div class="d-flex">
                                     <div>
                                         <h5 class="mb-2">{{$topics[0]->topicTitle}}</h5>
@@ -37,7 +37,7 @@
 
                                         <p class="text-white">{{Str::limit($topics[1]->content, 70 , ' (.)')}}</p>
 
-                                        <a href="{{route('topics.show',$topics[1]->id)}}" class="btn custom-btn mt-2 mt-lg-3">Learn More</a>
+                                        <a href="{{route('topicDetail',$topics[1]->id)}}" class="btn custom-btn mt-2 mt-lg-3">Learn More</a>
                                     </div>
 
                                     <span class="badge bg-finance rounded-pill ms-auto">25</span>

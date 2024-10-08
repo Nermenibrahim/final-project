@@ -79,6 +79,7 @@ class CategoryController extends Controller
      */
     public function destroy(string $id)
     {
-       
+        Category::where('id',$id)->delete();
+        return redirect()->route('categories.index');
     }
 }

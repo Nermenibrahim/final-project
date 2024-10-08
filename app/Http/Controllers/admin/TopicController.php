@@ -65,7 +65,7 @@ class TopicController extends Controller
     public function show(string $id)
     {
         $topic =  Topic::findOrFail($id);
-        return view('public.topics-detail',compact('topic'));
+        return view('admin.topics.topic_details',compact('topic'));
         
     }
 

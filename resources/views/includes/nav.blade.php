@@ -46,7 +46,7 @@
                                 data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
 
                             <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                                <li><a class="dropdown-item" href="{{route('contacts.create')}}">Contact Us</a></li>
+                                <li><a class="dropdown-item" href="{{route('contact-us')}}">Contact Us</a></li>
                                 <li><a class="dropdown-item" href="{{route('publicTestimonials')}}">Our Client Says</a></li>
                                 <li><a class="dropdown-item" href="{{route('topicsListing')}}">Topics Listing</a></li>
                                 

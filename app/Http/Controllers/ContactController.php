@@ -19,7 +19,7 @@ class ContactController extends Controller
 
     public function create()
     {
-        return view('public.contact');
+        
     }
 
 
@@ -51,7 +51,7 @@ class ContactController extends Controller
         
 
             
-            return redirect()->route('contactMessages');
+            return "Message was sent";
 
     }
 

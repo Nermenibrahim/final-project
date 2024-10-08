@@ -19,6 +19,8 @@ Route::get('index',[PublicController::class,'index'])->name('index');
 Route::get('publicTestimonials',[PublicController::class,'testimonials'])->name('publicTestimonials');
 Route::get('topics-listing',[PublicController::class,'topicsListing'])->name('topicsListing');
 Route::get('topics-detail/{id}',[PublicController::class,'topicDetail'])->name('topicDetail');
+Route::get('contact-us',[PublicController::class,'contact'])->name('contact-us');
+
 
 
 
@@ -54,6 +56,7 @@ Route::get('create','create')->name('create');
 Route::post('store','store')->name('store');
 Route::get('edit/{id}','edit')->name('edit');
 Route::put('update/{id}','update')->name('update');
+Route::get('delete/{id}','destroy')->name('destroy');
 
 });
 
@@ -79,11 +82,18 @@ Route::get('delete/{id}','destroy')->name('destroy');
 
 
 //routes for contact
-Route::get('contactMessages',[ContactController::class,'index'])->name('contactMessages');
-Route::get('contact-us',[ContactController::class,'create'])->name('contacts.create');
-Route::post('contacts/store',[ContactController::class,'store'])->name('contacts.store');
-Route::get('contactMessage/delete/{id}',[ContactController::class,'destroy'])->name('messages.destroy');
-Route::get('contactMessage/details/{id}',[ContactController::class,'show'])->name('messages.show');
+
+Route::group([
+    'prefix' => 'messages',
+    'as' => 'messages.',
+    'middleware'=> 'verified',
+    'controller' => ContactController::class,
+], function () {
+Route::get('','index')->name('index');
+Route::post('store','store')->name('store');
+Route::get('delete/{id}','destroy')->name('destroy');
+Route::get('details/{id}','show')->name('show');
+});
 
 
 
